@@ -1,0 +1,15 @@
+const arr=["apple","orange","mango","papaya"]
+const lengthString=(data)=>data.length
+const ll=arr.map(lengthString)
+const dist=(acc,cur)=> acc[cur] ? {...acc,[cur]:acc[cur]+1}:{...acc,[cur]:1}
+ll.reduce(dist,{})
+
+
+Q2.
+const fil=(data)=>{for (let str of data){if(vowels.includes(str)){return true}}}
+arr.filter(fil)
+
+Q3.
+
+const numChar=(acc,cur)=>([...acc,{[cur]:cur.length}])
+arr.reduce(numChar,[])

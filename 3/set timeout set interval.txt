@@ -1,0 +1,29 @@
+// ex6: setInterval
+// challenge
+// • learn how setInterval works
+// • write a function which takes a message and time. The function should print that
+// message every X interval.
+// • Write a function which takes a number. Then print a countdown from that number
+// to 0. At zero print "Bang Bang!"
+
+//Ex:1
+// const func = (msg, time) => {
+//   setInterval(() => console.log(msg), time);
+// };
+// func("hello", 2000);
+
+//Ex:2
+// const func = (num) => {
+//   let timerID = setInterval(() => {
+//     console.log(num);
+//     num = num - 1;
+//   }, 1000);
+//   setTimeout(() => {
+//     clearInterval(timerID);
+//     console.log("bang bang");
+//   }, num * 1000);
+// };
+// func(10);
+var num=5;
+var a=setInterval((num)=>{console.log(num);num=num-1},1000);
+setTimeout(()=>{clearInterval(a)},num*1000);

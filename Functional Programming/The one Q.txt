@@ -1,0 +1,7 @@
+const increment = num => num + 1;
+const square = num => num *  num;
+const minusTwo = num => num -2;
+
+const executeFuncOnNum = (...args) =>n=> args.reduce((acc,cur)=>cur(acc),n)
+
+console.log(executeFuncOnNum(increment, square, minusTwo)(4))
