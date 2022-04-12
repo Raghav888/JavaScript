@@ -1,0 +1,13 @@
+Custom hooks are replacment for HOC(Higher order function) in functioal components.
+In class based components, we use HOC for sharing the same state logic between two components.
+Example
+1. We have two 2 class components counter1, counter2
+2. Both have state for counter value and method for increasing the counter value.
+3. Now as the logic is same for increasing the counter and state for it,
+we can share that logic between both class components using HOC.
+4. In HOC we get one components as input and it returns new component with same logic.
+5. HOC can have other parameters as input
+
+So, in functional components custom hooks are introduced as replacement for HOC
+
+1. In custom hook, we create another function that has all the shared logic code and we can it in required components
