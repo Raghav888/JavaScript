@@ -1,0 +1,11 @@
+1. Promsiea.all([]) It makes parallel api calls for all promises and return an array of reponse from promises when all promises are resolved.
+If any promise is rejected, it will break and give error that promise is rejected
+
+2. Promise.allSettled([]) It also makes parallel api calls for all promises and return an array of reponse from all promises whether they are rejected or resolved.
+It won't give error if any promise is rejected. In array it will show that this promise is rejected.
+
+3. Promise.race([]) It will make parallel api call for those promises and return a promise that is resolved first. If any  promise is rejected before another promise
+is resolved . It will will show that promise is rejected.
+
+4. Promise.any([])  It will make parallel api call for those promises and return a promise that is resolved first. If any promise is rejected it will not show any error. It will 
+till it find a promise that is resolved and return it. If all promises are rejected then only it will give error.
