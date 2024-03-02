@@ -1,0 +1,2 @@
+Proxy works only with objects.
+If you wnat to work with simplae values, then use getter and setter in class constructor.
