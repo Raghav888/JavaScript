@@ -1,0 +1,26 @@
+this keyword in global space is global object.
+
+Inside browser, mobile, nodejs -> global object is different.
+
+In browser -> global object is window
+in nodejs -> global object is global
+
+
+/////////
+
+this keyword works differently in strict and non strict mode.
+
+1. non strict mode
+
+function sum(){
+console.log(this) // value will be window
+}
+
+
+this substitution => Whenever this value is undefined or numm,
+JS will replace this keyword value with globalObject. This happens only in non strict mode.
+2. strict mode
+
+function sum(){
+console.log(this) // value will be undefined
+}
