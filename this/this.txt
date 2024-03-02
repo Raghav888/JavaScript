@@ -24,3 +24,69 @@ JS will replace this keyword value with globalObject. This happens only in non s
 function sum(){
 console.log(this) // value will be undefined
 }
+
+
+But if we call the function in diff way in strict mode
+
+function sum(){
+console.log(this) 
+}
+
+window.sum()
+Then "this" value will be window Object. As window is been binded to it.
+
+
+/////////////////////////////////////
+
+Method vs Function
+
+cont obj={
+a: function(){ // this is known as method
+
+}
+}
+
+function a(){} // known as function
+
+//////////
+
+const obj={
+a:"1",
+x: function(){
+ console.log(this)
+}
+}
+
+obj.x() // This will console "this" as obj
+
+/////////
+"this" inside arrow function
+
+this inside arrow function take values of there lexial env in which they are enclosed.
+
+const obj={
+a:"1",
+x: ()=>{
+ console.log(this)
+}
+}
+
+obj.x() // this value will be window object.
+
+// Nested Object example
+
+const obj={
+a:"1",
+x: function(){
+()=>{
+ console.log(this)
+}()
+}
+}
+
+obj.x()// Here the arrow function lexical scope is obj, so this keyword will hav value of obj.
+
+
+////////
+
+value of this keyword in DOM=> It is reference to the HTML element, from which "this" was been printed
